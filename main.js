@@ -1,5 +1,5 @@
-going_bad ="";
-goodbyes="";
+going_bad =" ";
+goodbyes=" ";
 
 leftWristX = 0;
 leftWristY = 0;
@@ -8,10 +8,11 @@ rightWristX = 0;
 rightWristY = 0;
 
 function setup(){
-    canvas = createCanvas(550, 450);
+    canvas  = createCanvas(500 , 425);
     canvas.center();
+    
 
-    video = createCapture(VIDEO);
+    video.size(500,425);
     video.hide();
 
     poseNet = ml5.poseNet(video, modelLoaded);
@@ -44,3 +45,4 @@ function gotPoses(results){
         console.log("rightWristX = " + rightWristX + "rightWristY = " + rightWristY);
     }
 }
+
